@@ -21,7 +21,7 @@
             class="form-control mb-3"
             name="isChecked" 
             id="isChecked"
-            [ngModel]="task?.isChecked"
+            [ngModel]="defaultStatus"
             #isChecked="ngModel"
             >
           <option value="yes">Yes</option>
@@ -35,7 +35,7 @@
   
         <div class="row">
           <div class="col-xs-12 btn-toolbar">
-            <button class="btn btn-success" style="margin-right: 5px;" type="submit" [disabled]="!f.valid">Save</button>
+            <button class="btn btn-success" style="margin-right: 5px;" type="submit" [disabled]="!f.valid">{{ buttonValue }}</button>
             <button class="btn btn-primary" type="button" (click)="onCancel()">Cancel</button>
           </div>
         </div>

@@ -3,7 +3,7 @@ export class Task {
         public id: string, 
         public content: string, 
         public date: string,
-        public isChecked?: boolean 
-        // public _id?: string,
+        public isChecked: boolean ,
+        public _id?: string
     ) {}
 }

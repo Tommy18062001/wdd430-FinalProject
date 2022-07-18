@@ -1,3 +1,14 @@
+<!-- Welcome message -->
+<div class="row">
+  <div class="welcome">
+    <h1>Plan your day</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem libero
+      fugit reiciendis, 
+    </p>
+  </div>
+</div>
+
 <div class="container">
     <div class="row">
       <span class="title lead pad-left-right">To do</span>
@@ -20,7 +31,7 @@
           ></div>
           <!--  (click)="search(searchBox.value)" -->
         </div>
-        <button class="btn btn-success" type="submit">Add Task</button>
+        <button class="btn btn-primary" type="submit">Add Task</button>
       </form>
     </div>
 
@@ -28,8 +39,9 @@
     <div class="row">
         <div class="offset-1 col-10">
           <app-task-item
-          *ngFor="let task of tasks"
+          *ngFor="let task of tasks; let i = index"
           [task]="task"
+          [index]="i"
         ></app-task-item>
         </div>
         <div class="col-4">

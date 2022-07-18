@@ -9,24 +9,28 @@ import { TaskService } from '../task.service';
   styleUrls: ['./task-list.component.css']
 })
 export class TaskListComponent implements OnInit {
-  tasks: Task[];
-  constructor(private taskService: TaskService) { }
+  tasks: Task[] = [];
+  constructor(private taskService: TaskService) {
+   }
 
   ngOnInit(): void {
+    this.tasks = this.taskService.getTasks()
     this.taskService.taskListChanged.subscribe(
       (taskList: Task[]) => {
         this.tasks = taskList;
       }
     )
-    this.tasks = this.taskService.getTasks()
+    // console.log(this.tasks);
+    // console.log(this.tasks[-1]);
   }
 
   onSubmit(form: NgForm) {
     console.log(form.value.userInput);
     const content = form.value.userInput;
-    const id = "2";
+    const id = '' ;
     const date = new Date().toDateString();
-    const newTask = new Task(id, content, date.toString());
+
+    const newTask = new Task(id, content, date, false);
     this.taskService.addTask(newTask);
   }
 

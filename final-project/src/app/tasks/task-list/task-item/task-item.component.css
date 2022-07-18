@@ -2,3 +2,21 @@ a {
     text-decoration: none;
 }
 
+.completed {
+    border-left: 7px solid #198754;
+}
+
+.completed td h5 {
+    text-decoration: line-through;
+}
+
+table {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 23%);
+    overflow: hidden;
+}
+
