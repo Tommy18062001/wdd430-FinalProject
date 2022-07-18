@@ -16,8 +16,6 @@ function SequenceGenerator() {
 
       sequenceId = sequence?._id;
       maxTaskId = sequence?.maxTaskId;
-
-      console.log(maxTaskId);
     });
 }
 

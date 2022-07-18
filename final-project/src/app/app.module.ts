@@ -11,6 +11,8 @@ import { TaskItemComponent } from './tasks/task-list/task-item/task-item.compone
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
+import { TasksFilterPipe } from './tasks/task-filter.pipe';
+import { DocsComponent } from './docs/docs.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { AppRoutingModule } from './app-routing.module';
     TaskListComponent,
     TaskEditComponent,
     TaskItemComponent,
+    TasksFilterPipe,
+    DocsComponent
   ],
   imports: [
     BrowserModule,

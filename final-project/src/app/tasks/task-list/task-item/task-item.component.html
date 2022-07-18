@@ -18,9 +18,10 @@
         </td>
         <td class="align-middle">
           <div class="d-flex justify-content-end">
-            <a style="cursor: pointer;" [routerLink]="[task.id, 'edit']"><i class="fa fa-pencil text-primary m-1"></i></a>
-            <a (click)="onDelete(task.id)" style="cursor: pointer;"><i class="fa fa-trash-alt text-danger m-1"></i></a>
-            <i></i></div>
+            <a style="cursor: pointer;" [routerLink]="[task.id, 'edit']"><i class="fa fa-pen-to-square text-primary m-1"></i></a>
+            <a (click)="onDelete(task.id)" style="cursor: pointer;"><i class="fa-regular fa-rectangle-xmark text-danger m-1"></i></a>
+            <i></i>
+          </div>
             <div class="d-flex justify-content-end">
               <span class="text-muted">{{ task.date }} </span>
             </div>

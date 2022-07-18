@@ -10,6 +10,8 @@ import { TaskService } from '../task.service';
 })
 export class TaskListComponent implements OnInit {
   tasks: Task[] = [];
+  filterState: string = "all";
+
   constructor(private taskService: TaskService) {
    }
 
@@ -32,6 +34,11 @@ export class TaskListComponent implements OnInit {
 
     const newTask = new Task(id, content, date, false);
     this.taskService.addTask(newTask);
+  }
+
+  updateFilter(value: string) {
+    this.filterState = value
+    document.parentElement.classList.toggle("active")
   }
 
 }

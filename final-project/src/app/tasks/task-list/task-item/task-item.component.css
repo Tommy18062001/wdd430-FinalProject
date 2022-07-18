@@ -2,8 +2,8 @@ a {
     text-decoration: none;
 }
 
-.completed {
-    border-left: 7px solid #198754;
+a i {
+    font-size: 20px;
 }
 
 .completed td h5 {
